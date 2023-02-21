@@ -2,13 +2,8 @@ import { Layout } from "types/layout.types";
 import profileController from "../../../controller/profile.controller";
 import { Training } from "types/training.types";
 import trainingCartView from "../../components/training.cart.view";
-<<<<<<< HEAD
 import { getProfileTrainingsLang } from "lang/profile/trainings.profile.lang";
 import { getTrainingCardLang } from "lang/training.card.lang";
-=======
-import { getProfileTrainingsLang } from "../../../lang/profile/trainings.profile.lang";
-import { getTrainingCardLang } from "../../../lang/training.card.lang";
->>>>>>> 0448ac2 (fix: profile trainings open button)
 import navigationModel from "../../../model/navigation.model";
 import { Routing } from "types/route.types";
 import navigationController from "../../../controller/navigation.controller";
