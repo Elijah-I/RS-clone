@@ -148,10 +148,6 @@
 		width: 500px;
 	}
 
-
-	@include media-laptop {
-		width: 60%;
-	}
 	@include media-tablet {
 		width: 100%;
 	}
