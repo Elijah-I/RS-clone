@@ -49,11 +49,7 @@
 			object-fit: contain;
 		}
 
-<<<<<<< HEAD
 		@media screen and (max-width: 1000px){
-=======
-		@include media-tablet {
->>>>>>> 416a6e0 (feat: implement adaptive for tablet)
 			max-width: 300px;
 		}
 	}
