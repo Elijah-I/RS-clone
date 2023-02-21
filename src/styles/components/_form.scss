@@ -16,7 +16,7 @@
 	&__desc {
 		display: flex;
 		flex-direction: column;
-		margin: 20px 0 30px 0;
+		margin: 0 0 30px;
 		text-align: center;
 	}
 
@@ -148,6 +148,10 @@
 		width: 500px;
 	}
 
+
+	@include media-laptop {
+		width: 60%;
+	}
 	@include media-tablet {
 		width: 100%;
 	}
