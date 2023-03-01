@@ -1,0 +1,34 @@
+@use "../abstract" as *;
+
+.program {
+	// .program__wrapper
+	&__wrapper {
+	}
+
+	&__top {
+	}
+
+	// .program__content
+	& .training {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		@extend %block-shadowed;
+		text-align: center;
+		background: var(--card-bg-color);
+		padding: 15px 32px 30px 32px;
+
+		&__img {
+		}
+
+		&__content {
+			padding: 0;
+		}
+	}
+
+	& .training__text {
+		margin-bottom: 0;
+	}
+}

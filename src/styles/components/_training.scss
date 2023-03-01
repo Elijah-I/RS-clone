@@ -1,0 +1,66 @@
+@use "../abstract" as *;
+
+.t-training {
+  // t-training__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  // t-training__title
+  &__title {
+  }
+
+  // t-training__desc
+  &__desc {
+    max-width: 900px;
+    text-align: left;
+  }
+
+  // t-training__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @extend %block-shadowed;
+    text-align: center;
+    background: var(--card-bg-color);
+    padding: 30px 32px 30px 32px;
+  }
+
+  &__tags {
+    justify-content: center;
+  }
+
+  // t-training__back
+  &__back {
+    min-width: 133px;
+    text-align: center;
+    text-decoration: none;
+    flex: 0 0 133px;
+    align-self: flex-start;
+    position: relative;
+    top: 7px;
+  }
+
+  // t-training__last-line
+  &__last-line {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__video {
+    @media screen and (max-width: 876px) {
+      width: 100%;
+    }
+  }
+}

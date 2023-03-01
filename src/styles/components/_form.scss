@@ -1,0 +1,158 @@
+@use "../abstract" as *;
+
+.form {
+	margin-bottom: 80px;
+
+	// .registration__wrapper
+	&__wrapper {
+	}
+
+	// .registration__title
+	&__title {
+		margin: 0 0 20px;
+	}
+
+	// .registration__desc
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		margin: 20px 0 30px 0;
+		text-align: center;
+	}
+
+	// .registration__text
+	&__text {
+		@include font(2.2rem, 4.6rem, 300);
+		// .registration__text--bold
+		&--bold {
+			@include font(2.8rem, 4.6rem, 500);
+		}
+
+		@include media-tablet {
+			@include font(1.6rem, 2.6rem, 300);
+
+			&--bold {
+				@include font(2.1rem, 4.6rem, 500);
+			}
+		}
+	}
+
+	&__content {
+		@extend %block-shadowed;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 30px 30px;
+		background: var(--secondary-bg-color);
+	}
+
+	// .registration__form
+	&__form {
+		border-radius: 10px;
+		margin-bottom: 30px;
+	}
+
+	&__login {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		margin-top: 30px;
+	}
+
+	&__redirect {
+		text-align: center;
+	}
+
+	&__link {
+		text-decoration: underline;
+		color: var(--colored-btn-color);
+		&:hover {
+			color: var(--accent-color);
+		}
+	}
+}
+
+.form-fields {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 600px;
+
+	@media screen and (min-width: 1440px) {
+		//width: auto;
+	}
+
+	// .reg-form__label
+	&__label {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 16px;
+		left: 20px;
+	}
+
+	&__images {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 20px;
+
+		@include media-tablet {
+			gap: 10px;
+			justify-content: space-around;
+		}
+	}
+
+	// .reg-form__input
+	&__input {
+		width: 100%;
+		outline: none;
+		background-color: var(--input-bg-color);
+		padding: 15px 15px 15px 45px;
+		border: 1px solid var(--input-border-color);
+		border-radius: 10px;
+		color: var(--input-text-color);
+	}
+
+	&__submit {
+		text-align: center;
+	}
+
+	// .reg-form__button
+	&__button {
+		width: 100%;
+		padding: 15px 40px 15px;
+		border-radius: 10px;
+		cursor: pointer;
+		font-family: $font-family-primary;
+		@include font(1.6rem, 2.2rem, normal);
+		@extend %transition;
+		background: var(--colored-btn-color);
+		border: 1px solid var(--colored-btn-color);
+		color: var(--colored-btn-text-color);
+
+		&:hover {
+			background: var(--colored-btn-hover-color);
+			opacity: 0.8;
+		}
+	}
+
+	@include media-large-laptop {
+		width: 500px;
+	}
+
+	@include media-tablet {
+		width: 100%;
+	}
+}
+
+.form-fields select {
+	appearance: none;
+}

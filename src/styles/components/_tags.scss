@@ -1,0 +1,44 @@
+@use "../abstract" as *;
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	>* {
+		margin: 0 7px 10px 0;
+	}
+}
+
+.tag {
+	@include font(1.2rem, 2.8rem, 400);
+	flex-grow: 1;
+	border-radius: 90px;
+	padding: 0 14px;
+	text-align: center;
+
+	&--bordered {
+		background: var(--tag-bg-color);
+	}
+
+	&--rounded {
+		background: var(--tag-bg-color);
+		border-radius: 12px;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		margin: 0;
+	}
+
+	&--squared {
+		background: var(--tag-bg-color);
+		color: var(--colored-btn-color);
+		border-radius: 12px;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		margin: 0;
+	}
+}

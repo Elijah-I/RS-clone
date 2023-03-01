@@ -1,0 +1,52 @@
+@use "../abstract" as *;
+
+.training-cart {
+	@extend %block-shadowed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-grow: 1;
+	gap: 30px;
+	max-width: 550px;
+	width: 100%;
+	background: var(--card-bg-color);
+	padding: 15px 32px 30px 32px;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__title {
+		@include font(2.3rem, 4.2rem, 400);
+	}
+
+	&__tags {
+		margin-bottom: 10px;
+	}
+
+	&__button {
+	}
+
+	@include media-tablet {
+		flex-direction: column;
+		padding: 20px 28px 28px 28px;
+
+		&__content {
+			align-items: center;
+			text-align: center;
+		}
+
+		&__tags {
+			justify-content: center;
+		}
+
+		.icon-round {
+			order: -1;
+		}
+	}
+
+	@include media-mobile-big {
+	}
+}

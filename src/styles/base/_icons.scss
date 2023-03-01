@@ -1,0 +1,408 @@
+@use "../abstract" as *;
+
+.icon {
+	display: inline-flex;
+}
+
+.icon--logo {
+	background-image: var(--logo);
+	@include icon-size(160px, 60px);
+	background-size: 100%;
+
+	@include media-tablet {
+		@include icon-size(130px, 45px);
+	}
+}
+
+.icon--close {
+	background-image: var(--close-icon);
+	@include icon-size(20px, 20px);
+	background-size: 100%;
+	cursor: pointer;
+
+	&:hover {
+		filter: invert(50%);
+	}
+}
+
+.icon--reg {
+	background-image: var(--reg-icon);
+	@include icon-size(32px, 32px);
+	background-size: 100%;
+}
+
+.icon--auth {
+	background-image: var(--reg-icon);
+	@include icon-size(32px, 32px);
+	background-size: 100%;
+}
+
+.icon--close-modal {
+	background-image: var(--close-modal-icon);
+	@include icon-size(20px, 20px);
+	background-size: 100%;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+.icon--burger {
+	background-image: var(--burger-menu-icon);
+	@include icon-size(18px, 10px);
+	display: none;
+	@include media-tablet {
+		display: inline-flex;
+		cursor: pointer;
+	}
+}
+
+.icon--arrow {
+	background-image: var(--arrow-left);
+	@include icon-size(15px, 15px);
+	background-size: 100%;
+	cursor: pointer;
+
+	&:hover {
+		background-image: var(--arrow-left-hover);
+	}
+}
+
+.icon--create {
+	background-image: var(--create-icon);
+	@include icon-size(24px, 24px);
+	background-size: 100%;
+
+	&:hover {
+		background-image: var(--create-icon-hover);
+	}
+}
+
+.icon--delete {
+	background-image: var(--delete-icon);
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+
+	&:hover {
+		background-image: var(--delete-icon-hover);
+	}
+}
+
+.icon--volume {
+	background-image: var(--volume-icon);
+	@include icon-size(24px, 24px);
+	background-size: 100%;
+
+	&:hover {
+		background-image: var(--volume-icon-hover);
+	}
+}
+
+.icon--youtube {
+	background-image: var(--youtube-icon);
+	@include icon-size(128px, 128px);
+	background-size: 100%;
+	transition: all 0.5s ease 0s;
+
+	&:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+}
+
+.icon--github {
+	display: inline-flex;
+	background-image: url("./../assets/svg/github/github.svg");
+	@include icon-size(30px, 30px);
+	background-size: 100%;
+	transition: all 0.5s ease 0s;
+
+	&:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+}
+
+.icon--rss {
+	display: inline-flex;
+	background-image: url("./../assets/svg/rs/logo_rs.svg");
+	@include icon-size(70px, 30px);
+	background-size: 100%;
+
+	transition: all 0.5s ease 0s;
+	&:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+}
+
+.icon--profile{
+	background-image: url("./../assets/svg/registration/profile.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--message{
+	background-image: url("./../assets/svg/registration/message.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--lock{
+	background-image: url("./../assets/svg/registration/lock.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--call{
+	background-image: url("./../assets/svg/registration/call.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--date{
+	background-image: url("./../assets/svg/registration/date.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--gender{
+	background-image: url("./../assets/svg/registration/gender.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--height{
+	background-image: url("./../assets/svg/registration/height.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--weight{
+	background-image: url("./../assets/svg/registration/weight.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon-round {
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	&--shadow {
+		background: var(--round-icon-bg-color);
+		position: relative;
+	}
+}
+
+.icon--button-round {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--context-menu-icon-bg);
+}
+
+.icon-squared {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	&--shadow {
+	}
+}
+
+.icon--blur {
+	opacity: 0.2;
+}
+
+.icon--fire {
+	background-image: url("./../assets/svg/achievements/fire.svg");
+	@include icon-size(34px, 34px);
+	background-size: 100%;
+}
+
+.icon--calendar {
+	background-image: url("./../assets/svg/achievements/calendar.svg");
+	@include icon-size(34px, 34px);
+	background-size: 100%;
+}
+
+.icon--dumbbells {
+	background-image: url("./../assets/svg/achievements/dumbbells.svg");
+	@include icon-size(34px, 34px);
+	background-size: 100%;
+}
+
+.icon--salad {
+	background-image: url("./../assets/svg/achievements/salad.svg");
+	@include icon-size(34px, 34px);
+	background-size: 100%;
+}
+
+.icon--water {
+	background-image: url("./../assets/svg/achievements/water.svg");
+	@include icon-size(34px, 34px);
+	background-size: 100%;
+}
+
+.icon--steps {
+	background-image: url("./../assets/svg/achievements/steps.svg");
+	@include icon-size(34px, 34px);
+	background-size: 100%;
+}
+
+.icon--fullbody {
+	background-image: url("./../assets/svg/workouts/fullbody.svg");
+	@include icon-size(77px, 95px);
+	background-size: 100%;
+}
+
+.icon--gym {
+	background-image: url("./../assets/svg/workouts/gym.svg");
+	@include icon-size(54px, 104px);
+	background-size: 100%;
+}
+
+.icon--beginners {
+	position: absolute;
+	left: 17px;
+	background-image: url("./../assets/svg/workouts/beginners.svg");
+	@include icon-size(48px, 100px);
+	background-size: 100%;
+}
+
+.icon--abs {
+	position: absolute;
+	top: 10px;
+	background-image: url("./../assets/svg/workouts/abs.svg");
+	@include icon-size(98px, 74px);
+	background-size: 100%;
+}
+
+.icon--cardio {
+	background-image: url("./../assets/svg/workouts/cardio.svg");
+	@include icon-size(80px, 115px);
+	background-size: 100%;
+}
+
+.icon--equipments {
+	background-image: url("./../assets/svg/workouts/equipments.svg");
+	@include icon-size(60px, 100px);
+	background-size: 100%;
+}
+
+.icon--fat-burning {
+	background-image: url("./../assets/svg/workouts/fat-burning.svg");
+	@include icon-size(65px, 97px);
+	background-size: 100%;
+}
+
+.icon--intense {
+	position: absolute;
+	left: 7px;
+	background-image: url("./../assets/svg/workouts/intense.svg");
+	@include icon-size(80px, 97px);
+	background-size: 100%;
+}
+
+.icon--meditation {
+	background-image: url("./../assets/svg/workouts/meditation.svg");
+	@include icon-size(65px, 80px);
+	background-size: 100%;
+}
+
+.icon--no-equipments {
+	background-image: url("./../assets/svg/workouts/no-equipments.svg");
+	@include icon-size(90px, 100px);
+	background-size: 100%;
+}
+
+.icon--no-jumping {
+	background-image: url("./../assets/svg/workouts/no-jumping.svg");
+	@include icon-size(62px, 99px);
+	background-size: 100%;
+}
+
+.icon-square {
+	width: 200px;
+	height: 200px;
+	border-radius: 22px 100px 22px 22px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	// .icon-square--shadow
+	&--shadow {
+		background: var(--card-bg-color);
+	}
+}
+
+.icon--breakfast {
+	background-image: url("./../assets/svg/meals/breakfast.svg");
+	@include icon-size(114px, 79px);
+	background-size: 100%;
+}
+
+.icon--lunch {
+	background-image: url("./../assets/svg/meals/lunch.svg");
+	@include icon-size(131px, 77px);
+	background-size: 100%;
+}
+
+.icon--dinner {
+	background-image: url("./../assets/svg/meals/dinner.svg");
+	@include icon-size(133px, 77px);
+	background-size: 100%;
+}
+
+.icon--kcal {
+	background-image: url("./../assets/svg/nutrition/calories.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--fats {
+	background-image: url("./../assets/svg/nutrition/fats.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--proteins {
+	background-image: url("./../assets/svg/nutrition/proteins.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--carbs {
+	background-image: url("./../assets/svg/nutrition/carbs.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--title{
+	background-image: url("./../assets/svg/create-form/title.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--desc{
+	background-image: url("./../assets/svg/create-form/desc.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}
+
+.icon--goal {
+	background-image: url("./../assets/svg/goals/goal.svg");
+	@include icon-size(18px, 18px);
+	background-size: 100%;
+}

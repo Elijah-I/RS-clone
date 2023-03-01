@@ -1,0 +1,35 @@
+@use "../abstract" as *;
+
+.trainings-wrapper {
+	grid-area: workouts;
+
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.active-trainings,
+.completed-trainings {
+
+	// .active-trainings__wrapper
+	&__wrapper {
+	}
+
+	// .active-trainings__title
+	&__title {
+		margin: 0 0 30px;
+
+		@media screen and (max-width: 700px) {
+			text-align: center;
+		}
+	}
+
+	// .active-trainings__content
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+}

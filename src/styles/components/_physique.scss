@@ -1,0 +1,38 @@
+@use "../abstract" as *;
+
+.physique {
+
+	&__top {
+	}
+
+	// .physique__content
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	// .physique__card
+	&__card {
+		@extend %block-shadowed;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-grow: 1;
+		padding: 11px 25px;
+		background: var(--card-bg-color);
+	}
+
+	// .physique__data
+	&__data {
+		@include font(2.2rem, 4.6rem, 500);
+		background: var(--colored-btn-color);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	// .physique__text
+	&__text {
+	}
+}

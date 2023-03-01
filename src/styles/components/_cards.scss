@@ -1,0 +1,109 @@
+@use "../abstract" as *;
+
+.cards {
+	display: grid;
+	column-gap: 32px;
+	grid-template: 1fr / 1fr minmax(400px, 2fr);
+
+	@include media-large-laptop {
+		row-gap: 32px;
+		grid-template: 1fr/1fr;
+	}
+
+	&__container {
+		@extend %block-shadowed;
+		background: var(--secondary-bg-color);
+		padding: 15px 32px 32px 32px;
+
+		@include media-tablet {
+			padding: 15px 28px 28px 28px;
+		}
+
+		@include media-mobile-big {
+			padding: 15px 20px 20px 20px;
+		}
+	}
+}
+
+.aside {
+	grid-column: 1 / 2;
+	display: flex;
+	gap: 32px;
+	flex-direction: column;
+
+	&__edit-link {
+		align-self: flex-end;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+			color: var(--link-text-color);
+			&:hover {
+				color: var(--accent-color);
+			}
+		}
+	}
+
+	&__back-btn {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		align-self: flex-start;
+		text-align: center;
+
+		color: var(--link-text-color);
+
+
+		&:hover {
+			a {
+				color: var(--accent-color);
+			}
+
+			.icon {
+				background-image: var(--arrow-left-hover);
+			}
+		}
+
+		a {
+			text-decoration: none;
+			color: var(--link-text-color);
+
+			&:hover {
+				color: var(--accent-color);
+			}
+		}
+	}
+}
+
+.content {
+	grid-column: 2/3;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+
+	@include media-large-laptop {
+		grid-column: 1/2;
+	}
+}
+
+.card {
+	@extend %block-shadowed;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	background: var(--card-bg-color);
+	padding: 18px 25px;
+
+	&__top {
+		@include font(1.6rem, 3.5rem, normal);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 30px;
+	}
+
+	&__edit-btn {
+		align-self: flex-end;
+		text-align: center;
+	}
+}
